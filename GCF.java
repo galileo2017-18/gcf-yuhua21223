@@ -23,14 +23,16 @@ public class GCF {
 	
 	//Returns GCF of a and b (recursive)
 	//Precondition: a > 0, b > 0
-	public static int gcfRecursive (int a, int b) {
-
-	    //you will write this in today’s lab
-		
-
-
-
-
+	public static int gcfRecursive(int a, int b) {
+	    if (a == b) {
+	        return a;
+	    }
+	    else if (a > b) {
+	        return gcfRecursive(a - b, b);
+	    }
+	    else {
+	        return gcfRecursive(a, b - a);
+	    }
 	}
 	
 	
